@@ -1,0 +1,33 @@
+﻿<Window x:Class="MailApp.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailApp"
+        mc:Ignorable="d"
+        Title="Добавление письма" Height="350" Width="600" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel Height="220" Width="200" HorizontalAlignment="Center" Margin="0,0,260,20">
+            <Label Content="От кого" Height="30" VerticalContentAlignment="Center" Padding="0" />
+            <TextBox x:Name="tbSend_from"  Height="25" Width="200" VerticalContentAlignment="Center" />
+            <Label Content="Тема" Height="30" VerticalContentAlignment="Center" Padding="0" />
+            <TextBox x:Name="tbSubject" Height="25" Width="200" VerticalContentAlignment="Center" />
+            <Label Content="Кому" Height="30" VerticalContentAlignment="Center" Padding="0" />
+            <TextBox x:Name="tbSend_to" Height="25" Width="200" VerticalContentAlignment="Center" />
+            <Label Content="Важность" Height="30" VerticalContentAlignment="Center" Padding="0" />
+            <ComboBox x:Name="cbImportance" Height="25" Width="200" VerticalContentAlignment="Center" Padding="5,5,0,0" SelectedIndex="0">
+                <TextBlock Height="20" Padding="0">Важное</TextBlock>
+                <TextBlock Height="20" Padding="0">Обычное</TextBlock>
+            </ComboBox>
+
+        </StackPanel>
+        <StackPanel Height="220" Width="200" HorizontalAlignment="Center" Margin="260,0,0,20">
+            <Label Content="Дата" Height="30" VerticalContentAlignment="Center" Padding="0" />
+            <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Height="25" Width="200" />
+            <Label Content="Комментарий" Height="30" VerticalContentAlignment="Center" Padding="0" />
+            <TextBox x:Name="tbComment" Height="55" TextWrapping="Wrap" />
+            <CheckBox x:Name="cbIsRead" Height="25" VerticalContentAlignment="Center" Content="Прочитано" Margin="0,15,0,15"/>
+            <Button x:Name="addButton" Content="Добавить письмо" Height="25" Click="addButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

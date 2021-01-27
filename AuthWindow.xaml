@@ -1,0 +1,19 @@
+﻿<Window x:Class="MailApp.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailApp"
+        mc:Ignorable="d"
+        Title="Аутентификация" Height="300" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Height="165" Width="200" Margin="0,0,0,10">
+
+            <Label Height="30" Content="Почта"/>
+            <TextBox x:Name="tbMail" Height="25" VerticalContentAlignment="Center"/>
+            <Label Height="30" Content="Пароль"/>
+            <PasswordBox x:Name="pbPass" Height="25" VerticalContentAlignment="Center"></PasswordBox>
+            <Button x:Name="buttonEnter" Content="Войти" IsDefault="True" Height="25" Margin="0,30,0,0" Click="buttonEnter_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
